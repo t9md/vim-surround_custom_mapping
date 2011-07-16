@@ -6,12 +6,13 @@ Easily setup custom surrounding mappings for each filetype and global.
 
 All you have to do is setup `g:surround_custom_mapping` dictionary which `key` is
 `&fieltype` and `value` is `surrounding rule`.
+the key `_` is special key for global rule.
 For surrounding rule, refer `:help surround-customizing`
 
 Example
 ----------------------------------
     let g:surround_custom_mapping = {}
-    let g:surround_custom_mapping.global = {
+    let g:surround_custom_mapping._ = {
                 \ 'p':  "<pre> \r </pre>",
                 \ 'w':  "%w(\r)",
                 \ }

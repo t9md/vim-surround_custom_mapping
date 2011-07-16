@@ -22,7 +22,7 @@ function! s:surround_map(scope) "{{{
     if (a:scope != 'g') && empty(&ft)
         return
     endif
-    let map_dict =  a:scope == 'g' ? 'global' : &ft
+    let map_dict =  a:scope == 'g' ? '_' : &ft
 
     if !has_key(g:surround_custom_mapping, map_dict)
         return
