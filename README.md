@@ -4,21 +4,21 @@ mini utility which helps..
 
 Easily setup custom surrounding mappings for each filetype and global.
 
-All you have to do is setup `g:surround_map` dictionary which `key` is
+All you have to do is setup `g:surround_custom_mapping` dictionary which `key` is
 `&fieltype` and `value` is `surrounding rule`.
 For surrounding rule, refer `:help surround-customizing`
 
 Example
 ----------------------------------
-    let g:surround_map = {}
-    let g:surround_map.global = {
+    let g:surround_custom_mapping = {}
+    let g:surround_custom_mapping.global = {
                 \ 'p':  "<pre> \r </pre>",
                 \ 'w':  "%w(\r)",
                 \ }
-    let g:surround_map.help = {
+    let g:surround_custom_mapping.help = {
                 \ 'p':  "> \r <",
                 \ }
-    let g:surround_map.ruby = {
+    let g:surround_custom_mapping.ruby = {
                 \ '-':  "<% \r %>",
                 \ '=':  "<%= \r %>",
                 \ '9':  "(\r)",
@@ -37,16 +37,16 @@ Example
                 \ 'p':  "\1method\1 do \2args\r..*\r|&| \2\r end",
                 \ 'P':  "\1method\1 {\2args\r..*\r|&|\2 \r }",
                 \ }
-    let g:surround_map.javascript = {
+    let g:surround_custom_mapping.javascript = {
                 \ 'f':  "function(){ \r }"
                 \ }
-    let g:surround_map.lua = {
+    let g:surround_custom_mapping.lua = {
                 \ 'f':  "function(){ \r }"
                 \ }
-    let g:surround_map.python = {
+    let g:surround_custom_mapping.python = {
                 \ 'p':  "print( \r)",
                 \ '[':  "[\r]",
                 \ }
-    let g:surround_map.vim= {
+    let g:surround_custom_mapping.vim= {
                 \'f':  "function! \r endfunction"
                 \ }
