@@ -2,7 +2,7 @@ What is this?
 ==================================
 mini utility which helps..
 
-Easily setup custome surrounding mappings for each filetype and global.
+Easily setup custom surrounding mappings for each filetype and global.
 
 All you have to do is setup `g:surround_map` dictionary which `key` is
 `&fieltype` and `value` is `surrounding rule`.
