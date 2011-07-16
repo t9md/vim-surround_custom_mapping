@@ -6,10 +6,10 @@
 " License: BSD
 "============================================================
 " GUARD: {{{1
-if exists('g:loaded_surround_map')
+if exists('g:loaded_surround_custom_mapping')
   finish
 endif
-let g:loaded_surround_map = 1
+let g:loaded_surround_custom_mapping = 1
 let s:old_cpo = &cpo
 set cpo&vim
 
@@ -33,7 +33,7 @@ function! s:surround_map(scope) "{{{
     endfor
 endfunction"}}}
 
-" Main: {{{1
+" AutoCmd: {{{1
 augroup Surround
     autocmd!
     autocmd VimEnter * call s:surround_map('g')
