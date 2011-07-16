@@ -14,8 +14,8 @@ let s:old_cpo = &cpo
 set cpo&vim
 
 " Main: {{{1
-if !exists('g:surround_map')
-    let g:surround_map = {}
+if !exists('g:surround_custom_mapping')
+    let g:surround_custom_mapping = {}
 endif
 
 function! s:surround_map(scope) "{{{
@@ -24,10 +24,10 @@ function! s:surround_map(scope) "{{{
     endif
     let map_dict =  a:scope == 'g' ? 'global' : &ft
 
-    if !has_key(g:surround_map, map_dict)
+    if !has_key(g:surround_custom_mapping, map_dict)
         return
     end
-    for [key, action] in items(g:surround_map[map_dict])
+    for [key, action] in items(g:surround_custom_mapping[map_dict])
         let command = "let ".a:scope.":surround_".char2nr(key)." = ".string(action)
         execute command
     endfor
